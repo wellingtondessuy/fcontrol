@@ -1,11 +1,13 @@
-angular.module('app', [])
+angular.module('app.controllers', [])
 
-.controller('LoginController', ['$scope', function($scope) {
+.controller('LoginController', function($scope, LoginService) {
 	
 	$scope.login = function () {
+
+		LoginService.request('user', 'pass');
 
 		console.log("entrou na função de login");
 
 	}
 
-}])
+})
