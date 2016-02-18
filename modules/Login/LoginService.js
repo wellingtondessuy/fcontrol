@@ -6,7 +6,7 @@ angular.module('app.services', [])
 
 		$http({
 		  method: 'GET',
-		  url: 'localhost:9999/api/jahgs'
+		  url: 'http://localhost:9998/api/Orders'
 		}).then(function successCallback(response) {
 		    console.log('sucesso');
 		    console.log(response);
