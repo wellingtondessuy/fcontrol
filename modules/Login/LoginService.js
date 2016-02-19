@@ -2,11 +2,19 @@ angular.module('app.services', [])
 
 .service('LoginService', function($http){
 	
-	this.request = function (username, password) {
+	this.request = function (user, pass) {
+
+		var data = {
+			username: user,
+			password: pass
+		};
+
+		console.log(data);
 
 		$http({
-		  method: 'GET',
-		  url: 'http://localhost:9998/api/Orders'
+		  method: 'POST',
+		  url: 'http://localhost:9998/api/Login',
+		  data: data
 		}).then(function successCallback(response) {
 		    console.log('sucesso');
 		    console.log(response);

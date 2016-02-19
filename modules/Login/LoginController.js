@@ -2,12 +2,18 @@ angular.module('app.controllers', [])
 
 .controller('LoginController', function($scope, LoginService) {
 	
-	$scope.login = function () {
+	console.log('Iniciou o LoginController');
 
-		LoginService.request('user', 'pass');
+	$scope.login = function (user, pass) {
 
-		console.log("entrou na função de login");
+		console.log("LOGIN");
+		console.log(user);
+		console.log(pass);
 
-	}
+		LoginService.request(user, pass);
+
+	};
+
+	
 
 })

@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html ng-app="app">
   <head>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-resource.min.js"></script>
+
     <!-- Inclusão dos arquivos -->
 
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="modules/Login/LoginController.js"></script>
     <script type="text/javascript" src="modules/Login/LoginService.js"></script>
 
-    <link rel="stylesheet" href="../css/todo.css">
-
+    <script type="text/javascript" src="modules/Index/IndexController.js"></script>
   </head>
-  <body>
-    <div ng-controller="LoginController">
-      include directive controller na directive tudo na directive
-      <button ng-click="login()">Login</button>
-    </div>
+  <body ng-controller='IndexController'>
+
   </body>
 </html>
