@@ -9,4 +9,4 @@
 
 		docker build -t my-apache2 .
 
-		docker run -p 9995:80 -v /home/wellington/wdev/fcontrol/:/usr/local/apache2/htdocs:Z -it --name fcontrol_client -d my-apache2
+		docker run -p 9995:80 -v $(PWD):/usr/local/apache2/htdocs:Z -it --name fcontrol_client -d my-apache2
